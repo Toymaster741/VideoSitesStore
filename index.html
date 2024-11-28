@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="styles.css">
+<script src="script.js"></script>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigateur de Jeux Vidéo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <video autoplay loop muted playsinline class="background-video">
+        <source src="video-fond.mp4" type="video/mp4"> <!-- Chemin de votre vidéo -->
+        Votre navigateur ne supporte pas la vidéo.
+    </video>
+    <div class="container">
+        <h1>Visitez vos magasins de <span class="jeu" onclick="animateJeu()">jeu</span>x video preferes</h1>
+        <button onclick="visitSite('https://www.instant-gaming.com')">Instant Gaming</button>
+        <button onclick="visitSite('https://www.xbox.com/store')">Xbox Store</button>
+        <button onclick="visitSite('https://www.apple.com/app-store/')">Apple Store</button>
+        <button onclick="visitSite('https://www.nintendo.com/store/')">Nintendo Store</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

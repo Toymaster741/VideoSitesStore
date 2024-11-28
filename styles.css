@@ -1,0 +1,65 @@
+body {
+    font-family: 'Press Start 2P', cursive; /* Thème rétro de jeu vidéo */
+    margin: 0;
+    color: #fff; /* Couleur du texte */
+    overflow: hidden; /* Évite les barres de défilement */
+}
+
+.background-video {
+    position: fixed; /* Position fixe pour rester en arrière-plan */
+    top: 50%; /* Centre verticalement */
+    left: 50%; /* Centre horizontalement */
+    min-width: 100%; /* Minimum 100% de la largeur */
+    min-height: 100%; /* Minimum 100% de la hauteur */
+    width: auto; /* Largeur automatique */
+    height: auto; /* Hauteur automatique */
+    z-index: -1; /* Met la vidéo derrière le contenu */
+    transform: translate(-50%, -50%); /* Centre la vidéo */
+}
+
+.container {
+    display: flex; /* Utiliser flexbox pour centrer le contenu */
+    flex-direction: column; /* Aligne les éléments en colonne */
+    justify-content: center; /* Centre verticalement */
+    align-items: center; /* Centre horizontalement */
+    height: 100vh; /* Prend toute la hauteur de la fenêtre */
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent pour le conteneur */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+button {
+    background-color: #ff4081; /* Couleur vive pour les boutons */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s; /* Ajout de la transition pour transform */
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #e91e63; /* Couleur au survol */
+    transform: scale(1.1); /* Agrandit le bouton de 10% au survol */
+}
+
+.jeu {
+    display: inline-block; /* Nécessaire pour l'animation */
+    cursor: pointer; /* Changement du curseur pour indiquer que c'est cliquable */
+}
+
+@keyframes jump {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.jeu:hover {
+    animation: jump 0.5s; /* Animation de saut au survol */
+}
